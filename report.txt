@@ -1,0 +1,44 @@
+Library Dashboard Script Report
+
+File: library_dashboard (1).py
+
+Overview:
+- This script defines a `LibraryDashboard` class for loading and analyzing library transaction data from a CSV file.
+- It uses `pandas` for data handling, `numpy` for statistics, and `matplotlib`/`seaborn` for plotting.
+
+Main Features:
+1. load_data(file_name)
+   - Loads transaction data from a CSV into a pandas DataFrame.
+   - Handles file-not-found and generic errors.
+
+2. calculate_statistics()
+   - Computes statistics on `Borrowing_Duration`.
+   - Outputs total transactions, average, maximum, minimum, and standard deviation.
+
+3. filter_transactions()
+   - Prompts the user for a genre and displays transactions matching that genre.
+
+4. generate_report()
+   - Prints the mean borrowing duration grouped by genre.
+
+5. plot_bar_chart()
+   - Displays a bar chart of transaction counts per genre.
+
+6. plot_line_graph()
+   - Converts `Date` to datetime and plots transaction counts over time.
+
+7. plot_pie_chart()
+   - Displays a pie chart of genre distribution.
+
+8. plot_heatmap()
+   - Displays a heatmap of average borrowing duration by genre.
+
+Usage:
+- Run the script interactively.
+- Choose an option from the menu to load data, view statistics, filter records, generate a report, or view plots.
+- The CSV file must include columns named `Borrowing_Duration`, `Genre`, and `Date`.
+
+Notes:
+- `plot_bar_chart`, `plot_pie_chart`, and `plot_heatmap` assume the data is loaded first.
+- `plot_line_graph` converts the `Date` column to datetime before plotting.
+- `generate_report` currently prints a summary to the console rather than writing to a file.
